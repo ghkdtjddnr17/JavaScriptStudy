@@ -9,21 +9,25 @@ name = 'John';
 admin = name;
 alert(`Hello, ${name}!`);
 alert(`the result is ${1 + 2}!`);
-alert('ìë°”ìŠ¤í¬ë¦½íŠ¸!');
+alert('ÀÚ¹Ù½ºÅ©¸³Æ®!');
 alert(message);
 alert(Hello);
 alert(admin);
 
-//ë¶ˆë¦° ì²´í¬ í•¨ìˆ˜
+//ºÒ¸° Ã¼Å© ÇÔ¼ö
 let nameFieldChecked = true;
 let ageFieldChecked = false;
 let isGreater = 4 > 1;
 alert(isGreater);
 
-//prompt í•¨ìˆ˜(alert ì…ë ¥ ê°€ëŠ¥)
-let result = prompt('ë‚˜ì´ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”', 100);
-alert(`ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” ${result}ì‚´ì…ë‹ˆë‹¤.`);
+//prompt ÇÔ¼ö(alert ÀÔ·Â °¡´É)
+window.onload = () => {
+  document.getElementById('prompt').onclick = function () {
+    let result = prompt('³ªÀÌ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä', 100);
+    alert(`´ç½ÅÀÇ ³ªÀÌ´Â ${result}»ìÀÔ´Ï´Ù.`);
+  };
+};
 
-//ì»¨íŒ ëŒ€í™”ìƒì
-let isBoss = confirm('ë‹¹ì‹ ì´ ì£¼ì¸ì¸ê°€ìš”?');
+//ÄÁÆß ´ëÈ­»óÀÚ
+let isBoss = confirm('´ç½ÅÀÌ ÁÖÀÎÀÎ°¡¿ä?');
 alert(isBoss);
