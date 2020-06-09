@@ -48,12 +48,35 @@ window.onload = () => {
     alert(Number(false));
   };
   document.getElementById('operatorBtn').onclick = function () {
+    //계산 표현 방법
     alert(5 % 2);
     alert(8 % 3);
+    //2 *2
     alert(2 ** 2);
+    //2 * (2*2)
     alert(2 ** 3);
+    //2*2*2*2
     alert(2 ** 4);
     alert(4 ** (1 / 2));
     alert(8 ** (1 / 3));
+
+    let apples = '2';
+    let oranges = '3';
+    //문자열 합치기
+    alert(apples + oranges);
+    //숫자 형태로 바꿔서 덧셈
+    alert(+apples + +oranges);
+    let counter = 2;
+    counter++;
+    alert(counter);
+    let counter1 = 2;
+    counter1--;
+    alert(counter1);
+
+    //전위형,후위형 과제 1
+    let a = 1,
+      b = 1;
+    let c = ++a;
+    let d = b++;
   };
 };
