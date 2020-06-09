@@ -1,33 +1,59 @@
-let Hello = 'Hello world';
-let message;
-message = Hello;
-message = 'hello';
-
-let admin, name;
-
-name = 'John';
-admin = name;
-alert(`Hello, ${name}!`);
-alert(`the result is ${1 + 2}!`);
-alert('ÀÚ¹Ù½ºÅ©¸³Æ®!');
-alert(message);
-alert(Hello);
-alert(admin);
-
-//ºÒ¸° Ã¼Å© ÇÔ¼ö
-let nameFieldChecked = true;
-let ageFieldChecked = false;
-let isGreater = 4 > 1;
-alert(isGreater);
-
-//prompt ÇÔ¼ö(alert ÀÔ·Â °¡´É)
 window.onload = () => {
+  //prompt í•¨ìˆ˜(alert ì…ë ¥ ê°€ëŠ¥)
   document.getElementById('prompt').onclick = function () {
-    let result = prompt('´ç½ÅÀÇ ÀÌ¸§Àº ¹«¾ùÀÔ´Ï±î?', '');
-    alert(`´ç½ÅÀÇ ³ªÀÌ´Â ${result}»ìÀÔ´Ï´Ù.`);
+    let result = prompt('ë‹¹ì‹ ì˜ ì´ë¦„ì€ ë¬´ì—‡ì…ë‹ˆê¹Œ?', '');
+    alert(`ë‹¹ì‹ ì˜ ì´ë¦„ì€ ${result}ì…ë‹ˆë‹¤.`);
+  };
+  //ë¶ˆë¦° ì²´í¬ í•¨ìˆ˜
+  document.getElementById('booleanBtn').onclick = function () {
+    let nameFieldChecked = true;
+    let ageFieldChecked = false;
+    let isGreater = 4 > 1;
+    alert(isGreater);
+  };
+  //ì»¨íŒ ëŒ€í™”ìƒì
+  document.getElementById('confirmBtn').onclick = function () {
+    let isBoss = confirm('ë‹¹ì‹ ì´ ì£¼ì¸ì¸ê°€ìš”?');
+    alert(isBoss);
+  };
+  document.getElementById('textBtn').onclick = function () {
+    let Hello = 'Hello world';
+    let message, admin, name;
+    message = Hello;
+    name = 'John';
+    admin = name;
+    alert(`Hello, ${name}!`);
+    alert(`the result is ${1 + 2}!`);
+    alert('ìë°”ìŠ¤í¬ë¦½íŠ¸!');
+    alert(message);
+    alert(Hello);
+    alert(admin);
+  };
+  //í˜• ë³€í™˜
+  document.getElementById('textChangeBtn').onclick = function () {
+    //ë¬¸ìí˜• ë³€í™˜
+    let value = true;
+    alert(`1.value í˜•íƒœ : ${typeof value}`);
+    value = String(value);
+    alert(`2.value í˜•íƒœ : ${typeof value}`);
+    //ìˆ«ìí˜• ë³€í™˜
+    let str = '123';
+    alert(`1.str í˜•íƒœ : ${typeof str}`);
+    let num = Number(str);
+    alert(`2.str í˜•íƒœ : ${typeof num}`);
+    //ìˆ«ìí˜• ë³€í™˜ ì—¬ëŸ¬ ìƒíƒœ í™•ì¸
+    alert(Number('   123   '));
+    alert(Number('123z'));
+    alert(Number(true));
+    alert(Number(false));
+  };
+  document.getElementById('operatorBtn').onclick = function () {
+    alert(5 % 2);
+    alert(8 % 3);
+    alert(2 ** 2);
+    alert(2 ** 3);
+    alert(2 ** 4);
+    alert(4 ** (1 / 2));
+    alert(8 ** (1 / 3));
   };
 };
-
-//ÄÁÆß ´ëÈ­»óÀÚ
-let isBoss = confirm('´ç½ÅÀÌ ÁÖÀÎÀÎ°¡¿ä?');
-alert(isBoss);
