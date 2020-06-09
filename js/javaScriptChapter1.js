@@ -7,7 +7,27 @@ let admin, name;
 
 name = 'John';
 admin = name;
-alert('ìë°”ìŠ¤í¬ë¦½íŠ¸!');
+alert(`Hello, ${name}!`);
+alert(`the result is ${1 + 2}!`);
+alert('ÀÚ¹Ù½ºÅ©¸³Æ®!');
 alert(message);
 alert(Hello);
 alert(admin);
+
+//ºÒ¸° Ã¼Å© ÇÔ¼ö
+let nameFieldChecked = true;
+let ageFieldChecked = false;
+let isGreater = 4 > 1;
+alert(isGreater);
+
+//prompt ÇÔ¼ö(alert ÀÔ·Â °¡´É)
+window.onload = () => {
+  document.getElementById('prompt').onclick = function () {
+    let result = prompt('´ç½ÅÀÇ ÀÌ¸§Àº ¹«¾ùÀÔ´Ï±î?', '');
+    alert(`´ç½ÅÀÇ ³ªÀÌ´Â ${result}»ìÀÔ´Ï´Ù.`);
+  };
+};
+
+//ÄÁÆß ´ëÈ­»óÀÚ
+let isBoss = confirm('´ç½ÅÀÌ ÁÖÀÎÀÎ°¡¿ä?');
+alert(isBoss);
