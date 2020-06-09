@@ -79,4 +79,9 @@ window.onload = () => {
     let c = ++a;
     let d = b++;
   };
+  document.getElementById('conditionalBtn').onclick = function () {
+   let year = prompt('이 책은 몇년도에 출판되었을까요???','');
+   if(year == 2015)alert('정답입니다.');
+   else alert('틀렸습니다. 다시 해보세요!')
+  };
 };
