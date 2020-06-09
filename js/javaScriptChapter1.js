@@ -23,7 +23,7 @@ alert(isGreater);
 //prompt 함수(alert 입력 가능)
 window.onload = () => {
   document.getElementById('prompt').onclick = function () {
-    let result = prompt('나이를 입력해 주세요', 100);
+    let result = prompt('당신의 이름은 무엇입니까?', '');
     alert(`당신의 나이는 ${result}살입니다.`);
   };
 };
