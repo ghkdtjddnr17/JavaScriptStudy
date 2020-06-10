@@ -79,4 +79,19 @@ window.onload = () => {
     let c = ++a;
     let d = b++;
   };
+  //비교 연산자
+  document.getElementById('compareBtn').onclick = function () {
+    //숫자 비교
+    alert(5 > 4);
+    //문자열 비교
+    alert('apple' > 'pineapple');
+    //숫자 문자 비교
+    alert('2' > '12');
+    //underfined 와 null비교
+    alert(undefined == null);
+    alert(undefined === null);
+
+    alert(null == '\n0\n');
+    alert(null === +'\n0\n');
+  };
 };
