@@ -94,4 +94,33 @@ window.onload = () => {
     alert(null == '\n0\n');
     alert(null === +'\n0\n');
   };
+  //조건부 연산자와 if
+  document.getElementById('ifBtn').onclick = function () {
+    //자바스크립트 공식 이름
+    let question = prompt('자바스크립트 공식 이름은 무엇일까요?', '');
+    if (question === 'ECMAScript') {
+      alert('정답입니다.');
+    } else {
+      alert('모르셨나요? 정답은 ECMAScript입니다.');
+    }
+    //입력받은 숫자의 부호 표시하기
+    let question1 = prompt('숫자를 입력하세요', '');
+    let result = question1 > 0 ? alert('1') : question1 < 0 ? alert('-1') : question1 == 0 ? alert('0') : alert('없음');
+
+    //if 를 ?로 교체
+    let result1 = a + b < 4 ? '미만' : '이상';
+  };
+  //간단 로그인
+  document.getElementById('loginBtn').onclick = function () {
+    let adminId = prompt('아이디를 입력하세요.', '');
+    if (adminId === 'Admin') {
+      let adminPw = prompt('비밀번호를 입력해 주세요.', '');
+      if (adminPw === 'TheMaster') {
+        alert('환영합니다!');
+      } else {
+        let result = adminPw === '' ? '취소하였습니다.' : '인증에 실패하였습니다.';
+        alert(result);
+      }
+    }
+  };
 };
