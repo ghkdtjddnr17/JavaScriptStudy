@@ -136,5 +136,34 @@ window.onload = () => {
     do {
       num = prompt('100을 초과하는 숫자를 입력해주세요.', 0);
     } while (num <= 100 && num);
+
+    let decimal = prompt('숫자를 입력해 주세요.', '');
+
+    nextPrime: for (let i = 2; i <= decimal; i++) {
+      for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime;
+      }
+      alert(i);
+    }
+  };
+  //반복문 연습
+  document.getElementById('switchBtn').onclick = function () {
+    //if문은 swith 문으로 변환하기
+    let a = +prompt('0~3사이에 숫자를 입력해주세요.', '');
+
+    switch (a) {
+      case 0:
+        alert(0);
+        break;
+      case 1:
+        alert(1);
+        break;
+      case 2:
+      case 3:
+        alert('2,3');
+        break;
+      default:
+        break;
+    }
   };
 };
