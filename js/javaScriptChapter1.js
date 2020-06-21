@@ -79,11 +79,91 @@ window.onload = () => {
     let c = ++a;
     let d = b++;
   };
-  document.getElementById('conditionalBtn').onclick = function () {
-   let year = prompt('이 책은 몇년도에 출판되었을까요???','');
-   if(year == 2015)alert('정답입니다.');
-   else alert('틀렸습니다. 다시 해보세요!')
-   console.log('뭐지');
-   
+  //비교 연산자
+  document.getElementById('compareBtn').onclick = function () {
+    //숫자 비교
+    alert(5 > 4);
+    //문자열 비교
+    alert('apple' > 'pineapple');
+    //숫자 문자 비교
+    alert('2' > '12');
+    //underfined 와 null비교
+    alert(undefined == null);
+    alert(undefined === null);
+
+    alert(null == '\n0\n');
+    alert(null === +'\n0\n');
+  };
+  //조건부 연산자와 if
+  document.getElementById('ifBtn').onclick = function () {
+    //자바스크립트 공식 이름
+    let question = prompt('자바스크립트 공식 이름은 무엇일까요?', '');
+    if (question === 'ECMAScript') {
+      alert('정답입니다.');
+    } else {
+      alert('모르셨나요? 정답은 ECMAScript입니다.');
+    }
+    //입력받은 숫자의 부호 표시하기
+    let question1 = prompt('숫자를 입력하세요', '');
+    let result = question1 > 0 ? alert('1') : question1 < 0 ? alert('-1') : question1 == 0 ? alert('0') : alert('없음');
+
+    //if 를 ?로 교체
+    let result1 = a + b < 4 ? '미만' : '이상';
+  };
+  //간단 로그인
+  document.getElementById('loginBtn').onclick = function () {
+    let adminId = prompt('아이디를 입력하세요.', '');
+    if (adminId === 'Admin') {
+      let adminPw = prompt('비밀번호를 입력해 주세요.', '');
+      if (adminPw === 'TheMaster') {
+        alert('환영합니다!');
+      } else {
+        let result = adminPw === '' ? '취소하였습니다.' : '인증에 실패하였습니다.';
+        alert(result);
+      }
+    }
+  };
+  //반복문 연습
+  document.getElementById('forBtn').onclick = function () {
+    //짝수 출력
+    for (let i = 2; i < 11; i++) {
+      if (i % 2 === 0) {
+        alert(i);
+      }
+    }
+    //사용자가 유효한 값 입력 유도
+    let num;
+    do {
+      num = prompt('100을 초과하는 숫자를 입력해주세요.', 0);
+    } while (num <= 100 && num);
+
+    let decimal = prompt('숫자를 입력해 주세요.', '');
+
+    nextPrime: for (let i = 2; i <= decimal; i++) {
+      for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime;
+      }
+      alert(i);
+    }
+  };
+  //반복문 연습
+  document.getElementById('switchBtn').onclick = function () {
+    //if문은 swith 문으로 변환하기
+    let a = +prompt('0~3사이에 숫자를 입력해주세요.', '');
+
+    switch (a) {
+      case 0:
+        alert(0);
+        break;
+      case 1:
+        alert(1);
+        break;
+      case 2:
+      case 3:
+        alert('2,3');
+        break;
+      default:
+        break;
+    }
   };
 };
