@@ -166,4 +166,51 @@ window.onload = () => {
         break;
     }
   };
+  //함수 작성
+  document.getElementById('functionBtn').onclick = function () {
+    function checkAge(age) {
+      return age > 18 ? true : confirm('보호자의 동의를 받으셨나요?');
+    }
+    function checkAge1(age) {
+      return age > 18 || confirm('보호자의 동의를 받으셨나요?');
+    }
+    checkAge(19);
+    checkAge1(17);
+
+    function min(number, number1) {
+      return number < number1 ? number : number1;
+    }
+    alert(min(2, 5));
+    alert(min(3, -1));
+    alert(min(1, 1));
+
+    function pow(x, n) {
+      let sum = x;
+      for (var i = 1; i < n; i++) {
+        sum *= x;
+      }
+      return sum;
+    }
+    let pow1 = (x, n) => {
+      let sum = x;
+      for (var i = 1; i < n; i++) {
+        sum *= x;
+      }
+      return sum;
+    };
+    alert('@@@@@@' + pow(2, 3));
+    alert('@@@@@@' + pow1(5, 15));
+
+    //화살표 함수 변경하기
+
+    function ask(question, yes, no) {
+      if (confirm(question)) yes();
+      else no();
+    }
+    ask(
+      '동의하십니까?',
+      () => alert('동의하셨습니다.'),
+      () => alert('취소 버튼을 누르셨습니다.')
+    );
+  };
 };
