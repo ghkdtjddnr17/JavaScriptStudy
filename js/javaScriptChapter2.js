@@ -42,6 +42,68 @@ window.onload = () => {
     for (let nameKey in salaries) {
       sum += salaries[nameKey];
     }
-    return alert(sum);
+    alert(sum);
+
+    let menu = {
+      width: 200,
+      height: 300,
+      title: 'My menu',
+    };
+
+    function multiplyNumeric(params) {
+      for (let changeMenu in params) {
+        if (typeof params[changeMenu] === 'number') {
+          params[changeMenu] *= 2;
+        }
+        alert(params[changeMenu]);
+      }
+    }
+    multiplyNumeric(menu);
+  };
+  document.getElementById('referenceBtn').onclick = function () {
+    let message = {
+      name: 'John',
+      age: 30,
+    };
+    let phrase = {};
+    let permissions1 = { canView: true };
+    let permissions2 = { canEdit: true };
+    for (let key in message) {
+      phrase[key] = message[key];
+    }
+    phrase.name = 'Pete';
+    alert(message.name);
+    Object.assign(message, permissions1, permissions2);
+    console.log(message);
+
+    let clone = Object.assign({}, message);
+    console.log(clone);
+
+    let user = {
+      name: 'Join',
+      age: 30,
+    };
+    user.sayHi = () => {
+      alert('안녕하세요!');
+    };
+    user.sayHi();
+
+    //계산기 만들기
+    let calculator = {
+      read() {
+        this.text = +prompt('원하는 값을 입력 하세여.', 0);
+        this.text1 = +prompt('원하는 값을 입력 하세여.', 0);
+      },
+      sum() {
+        return this.text + this.text1;
+      },
+      mul() {
+        return this.text * this.text1;
+      },
+    };
+
+    calculator.read();
+    alert(calculator.sum());
+    alert(calculator.mul());
   };
 };
